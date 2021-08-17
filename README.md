@@ -1,8 +1,8 @@
-# A PyTorch implementation of IB-GAN model for AAAI2021
+# The PyTorch implementation of IB-GAN model of AAAI2021
 
 This package contains a PyTorch implementation of IB-GAN presented in the submitted paper.
-You can reproduce the experiment on dSprite (and Color-dSprite, 3DChairs, CelebA) dataset with the this implementation.
-
+You can reproduce the experiment on dSprite (Color-dSprite, 3DChairs, and CelebA) dataset with the this code.
+Current implementation is based on python==1.4.0. Please refer environments.yml for the environment settigs.
 Please refer to the Technical appendix page for more detailed information of hypter parameter settings for each experiment.
 
 
@@ -40,10 +40,8 @@ Note, all the default parameter settings are optimally set up for the dSprite ex
 For more details on the parameter settings for other datasets, please refer to the Technical appendix.
 
 
-* dSprite dataset for Kim's disentanglement score evaluation : Evauation file is currently lost.. (will be update later)
-
-The evaulation process and code is same as cdsprite experiment
-
+* dSprite dataset for Kim's disentanglement score evaluation : Evauation file is currently not available. (will be update soon)
+The evaulation process and code is same as cdsprite experiment.
 
 
 ## Reproducing Color-dSprite expreiemnt
@@ -61,9 +59,10 @@ Run the code with following argument:
 python -W ignore main.py --seed 7 --z_dim 16 --r_dim 10 --batch_size 64 --optim rmsprop --dataset cdsprites --viz True --viz_port 8097 --z_bias 0 --viz_name dsprites --beta 0.071 --alpha 1 --gamma 1 --G_lr 5e-5 --D_lr 1e-6 --max_iter 500000 --logiter 500 --ptriter 2500 --ckptiter 2500 --load_ckpt -1 --init_type normal --save_img True
 ```
 
-* Color-dSprite dataset for evaluation : "./data/img4eval_cdsprites.7z"
-  You first need to unzip "imgs4eval_cdsprites.7z" file using 7za.
-  Please locate all the unzip files in "/data/imgs4eval_cdsprites/*" folder. 
+* Color-dSprite dataset for Kim's disentanglement score evaluation : "./data/img4eval_cdsprites.7z". 
+
+You first need to unzip "imgs4eval_cdsprites.7z" file using 7za.
+Please locate all the unzip files in "/data/imgs4eval_cdsprites/*" folder. 
 
 run the evaluation on Kim's disentanglment metric, type
 ```
@@ -98,5 +97,22 @@ python -W ignore main2.py --seed 0 --z_dim 64 --r_dim 15 --batch_size 64 --optim
 ```
 python -W ignore main2.py --seed 0 --z_dim 64 --r_dim 10 --batch_size 64 --optim rmsprop --dataset 3dchairs --viz_port 8097 --z_bias 0 --r_weight 0 --viz_name 3dchairs --beta 0.325 --alpha 1 --gamma 1 --max_iter 700000 --G_lr 5e-5 --D_lr 2e-6 --R_lr 5e-5 --ckpt_dir checkpoint --output_dir output --logiter 500 --ptriter 20000 --ckptiter 20000 --ngf 32 --ndf 32 --label_smoothing True --instance_noise_start 0.5 --instance_noise_end 0.01 --init_type orthogonal
 ```
+
+
+## Citing IB-GAN
+
+If you like this work and end up using IB-GAN for your reseach, please cite our (paper)[https://ojs.aaai.org/index.php/AAAI/article/view/16967] with the bibtex code:
+
+@inproceedings{jeon2021ib,
+  title={IB-GAN: Disengangled Representation Learning with Information Bottleneck Generative Adversarial Networks},
+  author={Jeon, Insu and Lee, Wonkwang and Pyeon, Myeongjang and Kim, Gunhee},
+  booktitle={Proceedings of the AAAI Conference on Artificial Intelligence},
+  volume={35},
+  number={9},
+  pages={7926--7934},
+  year={2021}
+}
+
+The disclosure and use of the currently published code is limited to research purposes only.
 
 
