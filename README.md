@@ -1,10 +1,10 @@
 # The PyTorch implementation of IB-GAN model of AAAI 2021
 
-This package contains a PyTorch implementation of IB-GAN presented in the submitted [paper](https://ojs.aaai.org/index.php/AAAI/article/view/16967) in AAAI 2021
+This package contains a PyTorch implementation of IB-GAN presented in the submitted [paper](https://ojs.aaai.org/index.php/AAAI/article/view/16967) in AAAI 2021.
 
 You can reproduce the experiment on dSprite (Color-dSprite, 3DChairs, and CelebA) dataset with the this code.
 
-Current implementation is based on python==1.4.0. Please refer environments.yml for the environment settigs.
+Current implementation is based on python==1.4.0. Please refer environments.yml for the environment settings.
 
 Please refer to the Technical appendix page for more detailed information of hypter parameter settings for each experiment.
 
