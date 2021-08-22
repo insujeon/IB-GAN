@@ -1,6 +1,6 @@
 # The PyTorch implementation of IB-GAN model of AAAI 2021
 
-This package contains a PyTorch implementation of IB-GAN presented in the submitted [paper](https://ojs.aaai.org/index.php/AAAI/article/view/16967) in AAAI 2021.
+This package contains a PyTorch implementation of IB-GAN presented in the submitted [paper](https://ojs.aaai.org/index.php/AAAI/article/view/16967) (IB-GAN: Disentangled Representation Learning with Information Bottleneck Generative Adversarial Networks) in AAAI 2021.
 
 You can reproduce the experiment on dSprite (Color-dSprite, 3DChairs, and CelebA) dataset with the this code.
 
